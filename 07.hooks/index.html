@@ -21,7 +21,16 @@
             methods: {
                 increment(){
                     this.count++
+                },
+                alertTime(){
+                    alert(`La hora es ${Date.now().toLocaleString()}`)
                 }
+            },
+            created() {
+                this.alertTime()
+            },
+            mounted() {
+                this.alertTime()
             },
             updated(){
                 console.log('this.count', this.count)
