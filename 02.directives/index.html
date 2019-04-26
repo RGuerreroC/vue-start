@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <title>Vue App</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+<body>
+    <div id="app">
+        <h1>{{ text }}</h1>
+        <div 
+            v-bind:title="randNum"
+            v-if="shown"
+        >
+            Situate encima para obtener tu numero aleatorio
+        </div>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                text: 'Hello, World of VueJS',
+                randNum: Math.floor(Math.random() * 50) + 1,
+                shown: true,
+            }
+        });
+    </script>
+</body>
+</html>
